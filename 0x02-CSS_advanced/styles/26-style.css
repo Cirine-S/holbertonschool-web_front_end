@@ -198,7 +198,7 @@ ul.footer {
 }
 
 .card-testimonial card-avatar {
-    border-radius: 0.5em;
+    border-radius: 50%;
     width: 10rem;
     height: 10rem;
 }
