@@ -497,10 +497,10 @@ html {
     position: relative;
     margin-top: -8.5rem;
   }
-  .section-body .section-hero {
+  .section-hero .section-body {
     padding: 10rem 4rem;
   }
-  .section-category .section-hero {
+  .section-hero .section-category {
       color: var(--color-white);
       text-transform: uppercase;
   }
