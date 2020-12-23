@@ -497,10 +497,10 @@ html {
     position: relative;
     margin-top: -8.5rem;
   }
-  .section-body {
+  .section-body .section-hero {
     padding: 10rem 4rem;
   }
-  .section-category {
+  .section-category .section-hero {
       color: var(--color-white);
       text-transform: uppercase;
   }
@@ -509,7 +509,6 @@ html {
     background-repeat: no-repeat;
     background-size: 90rem auto;
     background-color: #010101;
-
   }
   .section-hero .section-title {
     margin-bottom: 5rem;
@@ -665,4 +664,3 @@ html {
     font-size: 10rem;
     z-index: -1;
   }
-  
