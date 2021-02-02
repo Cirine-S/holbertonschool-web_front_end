@@ -1,4 +1,4 @@
 # BOOTSTRAP framework
 	Bootstrap is a free and open-source CSS framework directed at responsive, mobile-first front-end web development. It contains CSS and JavaScript design templates for typography, forms, buttons, navigation, and other interface components.
 	
-![Bootstrap 4's logo](https://holbertonintranet.s3.amazonaws.com/uploads/medias/2020/3/81ad5d3e90751bb185d9.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUWMNL5ANN%2F20210201%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210201T114555Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=871bf41b522e25eacabae0246c13820e557e68f38da16e3864c6bb3863ac7b14)
+<div style="text-align:center"><img src="https://holbertonintranet.s3.amazonaws.com/uploads/medias/2020/3/81ad5d3e90751bb185d9.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUWMNL5ANN%2F20210201%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210201T114555Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=871bf41b522e25eacabae0246c13820e557e68f38da16e3864c6bb3863ac7b14" /></div>
