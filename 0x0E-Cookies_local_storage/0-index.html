@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Create basic cookie</title>
+</head>
+<body>
+	<h1><b>Login to the website</b></h1>
+	<form>
+		<input type="text" id="firstname" name="firstname" placeholder="Firstname">
+
+		<input type="email" id="email" name="email" placeholder="Email">
+
+		<input type="submit" value="Log me in" onclick="setCookies()">
+	</form>
+		<h1><b>Cookies</b></h1>
+		<input type="submit" value="Show the cookies" onclick="showCookies()">
+	<script type="application/javascript">
+		function setCookies() {
+			let firstname = document.getElementById("firstname")
+			document.cookie = `firstname=${firstname.value}`
+			console.log(firstname.value)
+			let email = document.getElementById("email")
+			document.cookie = `email=${email.value}`
+		}
+		function showCookies() {
+			let p = document.createElement("p")
+			let cookie = document.cookie
+			p.innerHTML = cookie
+			
+			document.querySelector("body").appendChild(p)
+		}
+	</script>
+
+</body>
+</html>

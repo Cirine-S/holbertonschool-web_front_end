@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Delete cookie and mini application</title>
+</head>
+<body>
+	<div>
+		<h2><b>Login to the website</b></h2>
+
+		<form>
+			<input type="text" id="firstname" name="firstname" placeholder="Firstname">
+
+			<input type="email" id="email" name="email" placeholder="Email">
+
+			<button onclick="setCookies()">Log me in</button>
+		</form>
+	</div>
+
+	<script type="application/javascript">
+		function setCookies() {
+			let firstname = document.getElementById("firstname")
+			document.cookie = `firstname=${firstname.value}`
+			console.log(firstname.value)
+			let email = document.getElementById("email")
+			document.cookie = `email=${email.value}`
+
+			let d = new Date();
+			d.setTime(d.getTime() + (10*24*60*60*1000));
+			let expires = "expires="+ d.toUTCString()
+			document.cookie = expires
+		}
+
+
+		const getCookie = (name) => {
+          let coo = `${name}=`;
+          let splittedCookie = document.cookie.split(';');
+          for(let i=0; i < splittedCookie.length; i++){
+
+            let cookie = splittedCookie[i];
+            while (cookie.charAt(0) == ' ')
+            cookie = cookie.substring(1);
+            if(cookie.indexOf(coo) == 0){
+                return cookie.substring(coo.length, cookie.length)
+            }
+          }
+          return "";
+       }	
+		
+		function showCookies() {
+			let p = document.createElement("p")
+			let cookie = document.cookie
+
+			p.innerHTML = "Email: " + getCookie("firstname") + " - Firstname: " + getCookie("email")
+			
+			document.querySelector("body").appendChild(p)
+		}
+
+		function showForm() {
+			let div = document.querySelector("div")
+			div.style.display = "block"
+		}
+
+		function hideForm() {
+			let div = document.querySelector("div")
+			div.style.display = "none"
+		}
+		function deleteCookiesAndShowForm() {
+			document.cookie = "firstname=; email=; expires=Mon, 08 Mar 2021 17:49:13 GMT"
+			showForm()
+		}
+		function showWelcomeMessageOrForm() {
+			if (getCookie('firstname') === "" || getCookie('email') === "") {
+					showForm()
+			} else {
+				hideForm()
+				let h1 = document.createElement("h1")
+
+				let a = document.createElement('a')
+      			let linkText = document.createTextNode("(logout)")
+      			a.appendChild(linkText)
+      			a.href = "#"
+				a.title = "(logout)"
+
+
+				h1.innerHTML = `Welcome ${getCookie('firstname')} `
+				h1.append(a)
+
+
+				h1.style.display = "block"
+
+				a.addEventListener("click", function CallBack() {
+					deleteCookiesAndShowForm()
+					h1.style.display = "none"
+					a.style.display = "none"
+				})
+				document.body.append(h1)
+			}
+		}
+		showWelcomeMessageOrForm()
+	</script>
+
+</body>
+</html>
